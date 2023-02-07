@@ -12,16 +12,18 @@ import static ru.VYurkin.TelegramBot.command.CommandName.NO;
 public class TelegramBot extends TelegramLongPollingBot {
 
     public static String COMMAND_PREFIX = "/";
-    @Value("${bot.username}")
-    private String usernameBot;
-    @Value("${bot.token}")
-    private String tokenBot;
+
 
     private final CommandContainer commandContainer;
 
     public TelegramBot() {
         this.commandContainer = new CommandContainer(new SendBotMessageServiceImpl(this));
     }
+
+    @Value("${bot.name}")
+    private String usernameBot;
+    @Value("${bot.token}")
+    private String tokenBot;
 
     @Override
     public String getBotUsername() {
@@ -46,5 +48,7 @@ public class TelegramBot extends TelegramLongPollingBot {
             }
         }
     }
-}
+
+
+    }
 

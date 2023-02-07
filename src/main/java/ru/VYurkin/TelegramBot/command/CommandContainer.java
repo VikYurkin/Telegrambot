@@ -1,9 +1,12 @@
 package ru.VYurkin.TelegramBot.command;
 
 import com.google.common.collect.ImmutableMap;
+import org.springframework.stereotype.Component;
 import ru.VYurkin.TelegramBot.services.SendBotMessageService;
 import static ru.VYurkin.TelegramBot.command.CommandName.*;
 
+
+@Component
 public class CommandContainer {
 
     private final ImmutableMap<String, Command> commandMap;

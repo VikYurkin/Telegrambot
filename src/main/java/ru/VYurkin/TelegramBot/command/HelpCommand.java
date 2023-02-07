@@ -2,7 +2,6 @@ package ru.VYurkin.TelegramBot.command;
 
 import org.telegram.telegrambots.meta.api.objects.Update;
 import ru.VYurkin.TelegramBot.services.SendBotMessageService;
-
 import static ru.VYurkin.TelegramBot.command.CommandName.*;
 
 public class HelpCommand implements Command{
