@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  tb-db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 9876543219
+      POSTGRES_DB: dev_tb_db
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 5432:5432

@@ -2,9 +2,26 @@ version: '3.7'
 
 services:
   tb:
+    depends_on:
+      - tb-db
     build:
       context: .
     environment:
-      - BOT_NAME=$BOT_NAME
-      - BOT_TOKEN=$BOT_TOKEN
+      BOT_NAME: $BOT_NAME
+      BOT_TOKEN: $BOT_TOKEN
+      BOT_DB_USERNAME: $BOT_DB_USERNAME
+      BOT_DB_PASSWORD: $BOT_DB_PASSWORD
     restart: always
+  tb-db:
+    image: postgres
+    restart: always
+    environment:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: 9876543219
+          POSTGRES_DB: dev_tb_db
+
+  adminer:
+     image: adminer
+     restart: always
+     ports:
+          - 5432:5432
