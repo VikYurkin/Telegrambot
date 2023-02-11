@@ -1,4 +1,4 @@
-package ru.VYurkin.TelegramBot.dto;
+package ru.VYurkin.TelegramBot.dto.GET;
 
 public enum GroupFilter {
 

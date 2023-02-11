@@ -2,20 +2,25 @@ package ru.VYurkin.TelegramBot.services;
 
 import jakarta.ws.rs.NotFoundException;
 import org.springframework.stereotype.Service;
-import ru.VYurkin.TelegramBot.dto.GroupDiscussionInfo.GroupDiscussionInfo;
+import ru.VYurkin.TelegramBot.client.GroupClient;
+import ru.VYurkin.TelegramBot.dto.GET.GroupDiscussionInfo.GroupDiscussionInfo;
 import ru.VYurkin.TelegramBot.models.GroupSub;
 import ru.VYurkin.TelegramBot.models.TelegramUser;
 import ru.VYurkin.TelegramBot.repositories.GroupSubRepository;
+
+import java.util.List;
 import java.util.Optional;
 
 @Service
 public class GroupSubServiceImpl implements GroupSubService {
     private final GroupSubRepository groupSubRepository;
     private  final TelegramUserService telegramUserService;
+    private final GroupClient groupClient;
 
-    public GroupSubServiceImpl(GroupSubRepository groupSubRepository, TelegramUserService telegramUserService) {
+    public GroupSubServiceImpl(GroupSubRepository groupSubRepository, TelegramUserService telegramUserService, GroupClient groupClient) {
         this.groupSubRepository = groupSubRepository;
         this.telegramUserService = telegramUserService;
+        this.groupClient = groupClient;
     }
 
     @Override
@@ -31,6 +36,7 @@ public class GroupSubServiceImpl implements GroupSubService {
         }else{
             groupSub = new GroupSub();
             groupSub.addUser(telegramUser);
+            groupSub.setLastArticleId(groupClient.findLastArticleId(groupDiscussionInfo.getId()));
             groupSub.setId(groupDiscussionInfo.getId());
             groupSub.setTitle(groupDiscussionInfo.getTitle());
         }
@@ -45,5 +51,10 @@ public class GroupSubServiceImpl implements GroupSubService {
     @Override
     public Optional<GroupSub> findById(Integer id) {
         return groupSubRepository.findById(id);
+    }
+
+    @Override
+    public List<GroupSub> findAll() {
+        return groupSubRepository.findAll();
     }
 }

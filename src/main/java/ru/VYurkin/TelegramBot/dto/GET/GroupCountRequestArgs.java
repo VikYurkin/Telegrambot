@@ -1,7 +1,7 @@
-package ru.VYurkin.TelegramBot.dto;
+package ru.VYurkin.TelegramBot.dto.GET;
 import lombok.Builder;
 import lombok.Getter;
-import ru.VYurkin.TelegramBot.dto.GroupInfo.GroupInfoType;
+import ru.VYurkin.TelegramBot.dto.GET.GroupInfo.GroupInfoType;
 import java.util.HashMap;
 import java.util.Map;
 import static java.util.Objects.nonNull;

@@ -1,9 +1,9 @@
-package ru.VYurkin.TelegramBot.dto.GroupDiscussionInfo;
+package ru.VYurkin.TelegramBot.dto.GET.GroupDiscussionInfo;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
-import ru.VYurkin.TelegramBot.dto.GroupInfo.GroupInfo;
+import ru.VYurkin.TelegramBot.dto.GET.GroupInfo.GroupInfo;
 
 @EqualsAndHashCode(callSuper = true)
 @Data

@@ -1,8 +1,8 @@
-package ru.VYurkin.TelegramBot.dto.GroupInfo;
+package ru.VYurkin.TelegramBot.dto.GET.GroupInfo;
 
 import lombok.Data;
 import lombok.ToString;
-import ru.VYurkin.TelegramBot.dto.GroupInfo.MeGroupInfo.MeGroupInfo;
+import ru.VYurkin.TelegramBot.dto.GET.GroupInfo.MeGroupInfo.MeGroupInfo;
 
 @Data
 @ToString

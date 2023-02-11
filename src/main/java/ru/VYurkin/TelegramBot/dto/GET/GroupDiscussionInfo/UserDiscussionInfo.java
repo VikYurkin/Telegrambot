@@ -1,4 +1,4 @@
-package ru.VYurkin.TelegramBot.dto.GroupDiscussionInfo;
+package ru.VYurkin.TelegramBot.dto.GET.GroupDiscussionInfo;
 
 import lombok.Data;
 

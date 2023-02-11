@@ -5,14 +5,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.VYurkin.TelegramBot.client.GroupClient;
 import ru.VYurkin.TelegramBot.client.GroupClientImpl;
-import ru.VYurkin.TelegramBot.dto.GroupCountRequestArgs;
-import ru.VYurkin.TelegramBot.dto.GroupDiscussionInfo.GroupDiscussionInfo;
-import ru.VYurkin.TelegramBot.dto.GroupInfo.GroupInfo;
-import ru.VYurkin.TelegramBot.dto.GroupRequestArgs;
+import ru.VYurkin.TelegramBot.dto.GET.GroupCountRequestArgs;
+import ru.VYurkin.TelegramBot.dto.GET.GroupDiscussionInfo.GroupDiscussionInfo;
+import ru.VYurkin.TelegramBot.dto.GET.GroupInfo.GroupInfo;
+import ru.VYurkin.TelegramBot.dto.GET.GroupRequestArgs;
 import java.util.List;
-import static ru.VYurkin.TelegramBot.dto.GroupInfo.GroupInfoType.TECH;
+import static ru.VYurkin.TelegramBot.dto.GET.GroupInfo.GroupInfoType.TECH;
 
-@DisplayName("Integration-level testing for JavaRushGroupClientImplTest")
+@DisplayName("Integration-level testing for GroupClientImplTest")
 public class GroupClientTest {
 
 
