@@ -9,7 +9,8 @@ public enum CommandName {
     STAT("/stat"),
     ADD_GROUP_SUB("/addgroupsub"),
     DELETE_GROUP_SUB("/deletegroupsub"),
-    LIST_GROUP_SUB("/listgroupsub");
+    LIST_GROUP_SUB("/listgroupsub"),
+    ADMIN_HELP("/ahelp");
 
 
     private final String commandName;

@@ -9,9 +9,9 @@ import ru.VYurkin.TelegramBot.dto.GET.GroupDiscussionInfo.GroupDiscussionInfo;
 import ru.VYurkin.TelegramBot.models.GroupSub;
 import ru.VYurkin.TelegramBot.models.TelegramUser;
 import ru.VYurkin.TelegramBot.repositories.GroupSubRepository;
-import ru.VYurkin.TelegramBot.services.GroupSubService;
+import ru.VYurkin.TelegramBot.services.interfaces.GroupSubService;
 import ru.VYurkin.TelegramBot.services.GroupSubServiceImpl;
-import ru.VYurkin.TelegramBot.services.TelegramUserService;
+import ru.VYurkin.TelegramBot.services.interfaces.TelegramUserService;
 
 import java.util.Optional;
 

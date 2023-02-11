@@ -1,4 +1,4 @@
-package ru.VYurkin.TelegramBot.services;
+package ru.VYurkin.TelegramBot.services.interfaces;
 
 public interface FindNewArticleService {
     void findNewArticles();

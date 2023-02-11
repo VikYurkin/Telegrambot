@@ -7,9 +7,9 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import ru.VYurkin.TelegramBot.bot.TelegramBot;
-import ru.VYurkin.TelegramBot.services.SendBotMessageService;
+import ru.VYurkin.TelegramBot.services.interfaces.SendBotMessageService;
 import ru.VYurkin.TelegramBot.services.SendBotMessageServiceImpl;
-import ru.VYurkin.TelegramBot.services.TelegramUserService;
+import ru.VYurkin.TelegramBot.services.interfaces.TelegramUserService;
 
 abstract class AbstractCommandTest {
     protected TelegramBot telegramBot = Mockito.mock(TelegramBot.class);

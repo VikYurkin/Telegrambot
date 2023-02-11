@@ -6,11 +6,12 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException;
 import ru.VYurkin.TelegramBot.bot.TelegramBot;
+import ru.VYurkin.TelegramBot.services.interfaces.SendBotMessageService;
 
 import java.util.List;
 
 @Service
-public class SendBotMessageServiceImpl implements SendBotMessageService{
+public class SendBotMessageServiceImpl implements SendBotMessageService {
 
     private final TelegramBot telegramBot;
 

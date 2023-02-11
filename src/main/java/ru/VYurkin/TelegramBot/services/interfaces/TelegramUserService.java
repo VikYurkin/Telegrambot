@@ -1,4 +1,4 @@
-package ru.VYurkin.TelegramBot.services;
+package ru.VYurkin.TelegramBot.services.interfaces;
 
 import ru.VYurkin.TelegramBot.models.TelegramUser;
 
@@ -12,4 +12,7 @@ public interface TelegramUserService {
     List<TelegramUser> retrieveAllActiveUsers();
 
     Optional<TelegramUser> findByChatId(String chatId);
+
+    List<TelegramUser> findAllInActiveUsers();
+    List<TelegramUser> findAllActiveUsers();
 }

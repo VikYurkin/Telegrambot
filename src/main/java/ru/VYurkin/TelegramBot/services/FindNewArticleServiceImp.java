@@ -6,6 +6,10 @@ import ru.VYurkin.TelegramBot.client.PostClient;
 import ru.VYurkin.TelegramBot.dto.POST.PostInfo.PostInfo;
 import ru.VYurkin.TelegramBot.models.GroupSub;
 import ru.VYurkin.TelegramBot.models.TelegramUser;
+import ru.VYurkin.TelegramBot.services.interfaces.FindNewArticleService;
+import ru.VYurkin.TelegramBot.services.interfaces.GroupSubService;
+import ru.VYurkin.TelegramBot.services.interfaces.SendBotMessageService;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

@@ -1,4 +1,4 @@
-package ru.VYurkin.TelegramBot.services;
+package ru.VYurkin.TelegramBot.services.interfaces;
 
 import ru.VYurkin.TelegramBot.dto.GET.GroupDiscussionInfo.GroupDiscussionInfo;
 import ru.VYurkin.TelegramBot.models.GroupSub;

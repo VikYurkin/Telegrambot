@@ -2,9 +2,9 @@ package ru.VYurkin.TelegramBot.command;
 
 import org.junit.jupiter.api.DisplayName;
 import ru.VYurkin.TelegramBot.command.command.StartCommand;
-
 import static ru.VYurkin.TelegramBot.command.CommandName.START;
 import static ru.VYurkin.TelegramBot.command.command.StartCommand.START_MESSAGE;
+
 
 @DisplayName("Unit-level testing for StartCommand")
 public class StartCommandTest extends AbstractCommandTest{

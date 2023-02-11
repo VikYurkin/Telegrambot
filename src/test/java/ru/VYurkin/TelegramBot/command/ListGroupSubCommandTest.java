@@ -8,8 +8,8 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import ru.VYurkin.TelegramBot.command.command.ListGroupSubCommand;
 import ru.VYurkin.TelegramBot.models.GroupSub;
 import ru.VYurkin.TelegramBot.models.TelegramUser;
-import ru.VYurkin.TelegramBot.services.SendBotMessageService;
-import ru.VYurkin.TelegramBot.services.TelegramUserService;
+import ru.VYurkin.TelegramBot.services.interfaces.SendBotMessageService;
+import ru.VYurkin.TelegramBot.services.interfaces.TelegramUserService;
 
 import java.util.ArrayList;
 import java.util.List;

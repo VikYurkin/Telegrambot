@@ -7,7 +7,7 @@ import org.mockito.Mockito;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import ru.VYurkin.TelegramBot.bot.TelegramBot;
-import ru.VYurkin.TelegramBot.services.SendBotMessageService;
+import ru.VYurkin.TelegramBot.services.interfaces.SendBotMessageService;
 import ru.VYurkin.TelegramBot.services.SendBotMessageServiceImpl;
 
 
