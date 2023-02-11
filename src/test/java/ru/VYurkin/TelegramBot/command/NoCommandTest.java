@@ -1,9 +1,10 @@
 package ru.VYurkin.TelegramBot.command;
 
 import org.junit.jupiter.api.DisplayName;
+import ru.VYurkin.TelegramBot.command.command.NoCommand;
 
 import static ru.VYurkin.TelegramBot.command.CommandName.NO;
-import static ru.VYurkin.TelegramBot.command.NoCommand.NO_MESSAGE;
+import static ru.VYurkin.TelegramBot.command.command.NoCommand.NO_MESSAGE;
 
 @DisplayName("Unit-level testing for NoCommand")
 public class NoCommandTest extends AbstractCommandTest{

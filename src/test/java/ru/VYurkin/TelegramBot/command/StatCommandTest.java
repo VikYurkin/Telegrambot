@@ -1,7 +1,9 @@
 package ru.VYurkin.TelegramBot.command;
 
+import ru.VYurkin.TelegramBot.command.command.StatCommand;
+
 import static ru.VYurkin.TelegramBot.command.CommandName.STAT;
-import static ru.VYurkin.TelegramBot.command.StatCommand.STAT_MESSAGE;
+import static ru.VYurkin.TelegramBot.command.command.StatCommand.STAT_MESSAGE;
 
 public class StatCommandTest extends AbstractCommandTest {
     @Override

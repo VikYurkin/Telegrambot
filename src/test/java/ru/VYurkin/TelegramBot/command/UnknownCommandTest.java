@@ -1,6 +1,8 @@
 package ru.VYurkin.TelegramBot.command;
 
-import static ru.VYurkin.TelegramBot.command.UnknownCommand.UNKNOWN_MESSAGE;
+import ru.VYurkin.TelegramBot.command.command.UnknownCommand;
+
+import static ru.VYurkin.TelegramBot.command.command.UnknownCommand.UNKNOWN_MESSAGE;
 
 public class UnknownCommandTest extends AbstractCommandTest{
     @Override

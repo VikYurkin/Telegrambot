@@ -1,9 +1,10 @@
 package ru.VYurkin.TelegramBot.command;
 
 import org.junit.jupiter.api.DisplayName;
+import ru.VYurkin.TelegramBot.command.command.StopCommand;
 
 import static ru.VYurkin.TelegramBot.command.CommandName.STOP;
-import static ru.VYurkin.TelegramBot.command.StopCommand.STOP_MESSAGE;
+import static ru.VYurkin.TelegramBot.command.command.StopCommand.STOP_MESSAGE;
 
 @DisplayName("Unit-level testing for StopCommand")
 public class StopCommandTest extends AbstractCommandTest{

@@ -1,6 +1,7 @@
-package ru.VYurkin.TelegramBot.command;
+package ru.VYurkin.TelegramBot.command.command;
 
 import org.telegram.telegrambots.meta.api.objects.Update;
+import ru.VYurkin.TelegramBot.command.Command;
 import ru.VYurkin.TelegramBot.services.SendBotMessageService;
 import ru.VYurkin.TelegramBot.services.TelegramUserService;
 
