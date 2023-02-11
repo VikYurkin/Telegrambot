@@ -1,6 +1,6 @@
 #!/bin/bash
 
-### Pull new changes
+## Pull new changes
 #git pull
 ##
 ### Prepare Jar

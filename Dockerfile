@@ -21,6 +21,6 @@ ENV BOT_NAME=name
 ENV BOT_TOKEN=token
 ENV BOT_DB_USERNAME=name
 ENV BOT_DB_PASSWORD=password
-ENV BOT_URL=url
+ENV BOT_URL=jdbc:postgresql://postgres:5432/postgres
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-Dspring.datasource.url=${BOT_URL}","-Dspring.datasource.password=${BOT_DB_PASSWORD}", "-Dbot.username=${BOT_NAME}", "-Dbot.token=${BOT_TOKEN}", "-Dspring.datasource.username=${BOT_DB_USERNAME}", "-jar", "app.jar"]
