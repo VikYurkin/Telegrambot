@@ -14,7 +14,7 @@ public class TelegramUser {
 
     @Id
     @Column(name = "chat_id")
-    private String chartId;
+    private Long chartId;
 
     @Column(name = "active")
     private boolean active;

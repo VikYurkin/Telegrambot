@@ -15,9 +15,11 @@ services:
     restart: always
 
   postgres:
-    image: postgres:13.1
+    image: postgres:15.2
     restart: always
     environment:
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: Password
+      POSTGRES_USER: Name
+      POSTGRES_DB: tbDB
     ports:
       - 5433:5432

@@ -2,7 +2,7 @@ package ru.VYurkin.TelegramBot.services;
 
 import jakarta.ws.rs.NotFoundException;
 import org.springframework.stereotype.Service;
-import ru.VYurkin.TelegramBot.client.GroupClient;
+import ru.VYurkin.TelegramBot.clients.interfaces.GroupClient;
 import ru.VYurkin.TelegramBot.dto.GET.GroupDiscussionInfo.GroupDiscussionInfo;
 import ru.VYurkin.TelegramBot.models.GroupSub;
 import ru.VYurkin.TelegramBot.models.TelegramUser;
@@ -26,19 +26,19 @@ public class GroupSubServiceImpl implements GroupSubService {
     }
 
     @Override
-    public GroupSub save(String chatId, GroupDiscussionInfo groupDiscussionInfo) {
+    public GroupSub save(Long chatId, GroupDiscussionInfo groupDiscussionInfo) {
         TelegramUser telegramUser = telegramUserService.findByChatId(chatId).orElseThrow(NotFoundException::new);
         GroupSub groupSub;
         Optional<GroupSub> groupSubFromDB = groupSubRepository.findById(groupDiscussionInfo.getId());
         if(groupSubFromDB.isPresent()) {
         groupSub = groupSubFromDB.get();
         Optional<TelegramUser> first = groupSub.getUsers().stream()
-                .filter(x-> x.getChartId().equalsIgnoreCase(chatId)).findFirst();
+                .filter(x-> x.getChartId().equals(chatId)).findFirst();
             if(first.isEmpty()){groupSub.addUser(telegramUser);}
         }else{
             groupSub = new GroupSub();
             groupSub.addUser(telegramUser);
-            groupSub.setLastArticleId(groupClient.findLastArticleId(groupDiscussionInfo.getId()));
+            groupSub.setLastPostId(groupClient.findLastPostId(groupDiscussionInfo.getId()));
             groupSub.setId(groupDiscussionInfo.getId());
             groupSub.setTitle(groupDiscussionInfo.getTitle());
         }

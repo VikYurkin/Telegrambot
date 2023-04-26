@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
-import ru.VYurkin.TelegramBot.client.GroupClient;
-import ru.VYurkin.TelegramBot.command.CommandContainer;
+import ru.VYurkin.TelegramBot.clients.interfaces.GroupClient;
+import ru.VYurkin.TelegramBot.commands.CommandContainer;
 import ru.VYurkin.TelegramBot.services.interfaces.GroupSubService;
 import ru.VYurkin.TelegramBot.services.SendBotMessageServiceImpl;
 import ru.VYurkin.TelegramBot.services.interfaces.StatisticsService;
@@ -14,7 +14,7 @@ import ru.VYurkin.TelegramBot.services.interfaces.TelegramUserService;
 
 import java.util.List;
 
-import static ru.VYurkin.TelegramBot.command.CommandName.NO;
+import static ru.VYurkin.TelegramBot.commands.CommandName.NO;
 
 @Component
 public class TelegramBot extends TelegramLongPollingBot {
@@ -54,9 +54,9 @@ public class TelegramBot extends TelegramLongPollingBot {
             String username = update.getMessage().getFrom().getUserName();
             if(message.startsWith(COMMAND_PREFIX)){
                 String commandIdentifier = message.split(" ")[0].toLowerCase();
-                commandContainer.retrieveCommand(commandIdentifier, username).execute(update);
+                commandContainer.findCommand(commandIdentifier, username).execute(update);
             } else {
-                commandContainer.retrieveCommand(NO.getCommandName(), username).execute(update);
+                commandContainer.findCommand(NO.getCommandName(), username).execute(update);
             }
         }
     }
